@@ -1,0 +1,148 @@
+{
+  "name": "renovate",
+  "version": "1.0.0",
+  "description": "Izzy Muerte's Common Renovate Configuration",
+  "private": true,
+  "scripts": {
+    "prepare": "is-ci || husky install",
+    "staged:config": "npx renovate-config-validator",
+    "staged:format": "npx lint-staged",
+    "format": "npx eslint --fix .",
+    "check": "npx eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruxisma/renovate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bruxisma/renovate/issues"
+  },
+  "homepage": "https://github.com/bruxisma/renovate#readme",
+  "devDependencies": {
+    "eslint": "8.2.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-json-schema-validator": "2.1.2",
+    "eslint-plugin-jsonc": "2.0.0",
+    "eslint-plugin-markdown": "2.2.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-yaml": "0.5.0",
+    "husky": "7.0.4",
+    "is-ci": "3.0.1",
+    "lint-staged": "11.2.6",
+    "prettier": "2.4.1",
+    "renovate": "29.3.5"
+  },
+  "lint-staged": {
+    "*.{yml,yaml}": "eslint --fix",
+    "*.json": "eslint --ext json --fix .",
+    "*.md": "eslint --ext md --fix ."
+  },
+  "renovate": {
+    "extends": ["bruxisma/renovate"],
+    "packageRules": [
+      {
+        "automerge": true,
+        "matchUpdateTypes": ["major"]
+      }
+    ]
+  },
+  "prettier": {},
+  "eslintIgnore": [".git/", ".husky/", "package-lock.json"],
+  "eslintConfig": {
+    "extends": ["plugin:markdown/recommended", "plugin:yaml/recommended"],
+    "overrides": [
+      {
+        "files": ["**/*.json"],
+        "excludedFiles": ["package.json", "package-lock.json"],
+        "extends": [
+          "plugin:json-schema-validator/recommended",
+          "plugin:jsonc/recommended-with-json",
+          "plugin:prettier/recommended"
+        ],
+        "rules": {
+          "json-schema-validator/no-invalid": [
+            "error",
+            "https://docs.renovatebot.com/renovate-schema.json"
+          ],
+          "jsonc/sort-keys": [
+            "error",
+            {
+              "hasProperties": ["addLabels"],
+              "order": {
+                "type": "asc"
+              },
+              "pathPattern": ".*"
+            },
+            {
+              "hasProperties": ["labels"],
+              "order": [
+                "extends",
+                "labels",
+                "timezone",
+                "commitMessagePrefix",
+                "commitMessageSuffix",
+                "semanticCommits",
+                "rangeStrategy",
+                "rebaseWhen",
+                "rollback",
+                "pin"
+              ],
+              "pathPattern": ".*"
+            }
+          ]
+        }
+      },
+      {
+        "files": ["package.json"],
+        "extends": ["plugin:jsonc/recommended-with-json"],
+        "rules": {
+          "jsonc/array-bracket-newline": [
+            "error",
+            {
+              "minItems": null,
+              "multiline": true
+            }
+          ],
+          "jsonc/array-bracket-spacing": ["error"],
+          "jsonc/array-element-newline": [
+            "error",
+            "consistent"
+          ],
+          "jsonc/indent": [
+            "error",
+            2
+          ],
+          "jsonc/object-curly-newline": [
+            "error",
+            {
+              "consistent": true
+            }
+          ],
+          "jsonc/object-curly-spacing": [
+            "error",
+            "always",
+            {
+              "arraysInObjects": false,
+              "objectsInObjects": false
+            }
+          ],
+          "jsonc/object-property-newline": [
+            "error",
+            {
+              "allowAllPropertiesOnSameLine": true
+            }
+          ],
+          "jsonc/sort-keys": [
+            "error",
+            {
+              "order": {
+                "type": "asc"
+              },
+              "pathPattern": "rules"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

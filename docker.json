@@ -1,0 +1,26 @@
+{
+  "docker": {
+    "addLabels": ["renovate:docker"],
+    "additionalBranchPrefix": "docker/",
+    "commitMessageTopic": "🐳 Docker Tag {{{depName}}}",
+    "pin": {
+      "groupName": "Docker",
+      "group": {
+        "commitMessageTopic": "🐳 {{{groupName}}} Digest",
+        "branchTopic": "digests"
+      }
+    },
+    "pinDigests": true,
+    "rangeStrategy": "pin"
+  },
+  "dockerfile": {
+    "commitMessageTopic": "🐳 Docker Tag {{{depName}}}",
+    "pin": {
+      "groupName": "Docker",
+      "group": {
+        "commitMessageTopic": "🐳 {{{groupName}}} Digest",
+        "branchTopic": "digest"
+      }
+    }
+  }
+}

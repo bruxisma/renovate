@@ -1,0 +1,14 @@
+{
+  "go": {
+    "addLabels": ["renovate:go"],
+    "additionalBranchPrefix": "go/",
+    "commitMessageTopic": "🐹 Go Module {{{depName}}}",
+    "pin": {
+      "groupName": "Go",
+      "group": {
+        "commitMessageTopic": "🐹 {{{groupName}}} Modules"
+      }
+    },
+    "postUpdateOptions": ["gomodTidy"]
+  }
+}

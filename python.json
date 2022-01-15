@@ -1,0 +1,15 @@
+{
+  "poetry": {
+    "addLabels": ["renovate:python"],
+    "additionalBranchPrefix": "python/",
+    "commitMessageTopic": "🐍 Python Package {{{depName}}}",
+    "pin": {
+      "group": {
+        "commitMessageTopic": "🐍 {{{groupName}}} Packages"
+      },
+      "groupName": "Python"
+    },
+    "rangeStrategy": "pin",
+    "versioning": "poetry"
+  }
+}

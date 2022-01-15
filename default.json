@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "bruxisma/renovate:actions",
+    "bruxisma/renovate:docker",
+    "bruxisma/renovate:go",
+    "bruxisma/renovate:node",
+    "bruxisma/renovate:python",
+    "bruxisma/renovate:rust",
+    "bruxisma/renovate:terraform",
+    ":gitSignOff"
+  ],
+  "labels": ["renovate:dependencies"],
+  "timezone": "America/Los_Angeles",
+  "commitMessagePrefix": "⬆",
+  "commitMessageSuffix": "{{#if isLockfileUpdate}}🔒{{/if}}",
+  "semanticCommits": "disabled",
+  "rangeStrategy": "auto",
+  "rebaseWhen": "behind-base-branch",
+  "rollback": {
+    "commitMessageAction": "Rollback",
+    "commitMessagePrefix": "⏪"
+  },
+  "pin": {
+    "commitMessageAction": "Pin",
+    "commitMessagePrefix": "📌"
+  },
+  "vulnerabilityAlerts": {
+    "addLabels": ["renovate:security"]
+  },
+  "packageRules": [
+    {
+      "automerge": true,
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"]
+    }
+  ]
+}

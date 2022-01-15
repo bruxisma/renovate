@@ -1,0 +1,14 @@
+{
+  "terraform-provider": {
+    "addLabels": ["renovate:terraform"],
+    "additionalBranchPrefix": "terraform/",
+    "commitMessageTopic": "🌎 Terraform Provider {{{depName}}}",
+    "pin": {
+      "groupName": "Terraform",
+      "group": {
+        "commitMessageTopic": "🌎 {{{groupName}}} Providers"
+      }
+    },
+    "rangeStrategy": "pin"
+  }
+}

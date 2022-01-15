@@ -1,0 +1,22 @@
+{
+  "cargo": {
+    "addLabels": ["renovate:rust"],
+    "additionalBranchPrefix": "rust/",
+    "commitMessageTopic": "🦀 Rust Crate {{{depName}}}",
+    "pin": {
+      "group": {
+        "commitMessageTopic": "🦀 {{{groupName}}} Crates"
+      },
+      "groupName": "Rust"
+    },
+    "rangeStrategy": "pin"
+  },
+
+  "packageRules": [
+    {
+      "groupName": "Rust Actions",
+      "matchManagers": ["github-actions"],
+      "matchPackagePrefixes": ["actions-rs/"]
+    }
+  ]
+}

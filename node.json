@@ -1,0 +1,49 @@
+{
+  "npm": {
+    "addLabels": ["renovate:node"],
+    "additionalBranchPrefix": "node/",
+    "commitMessageTopic": "☕ NodeJS Package {{{depName}}}",
+    "packageRules": [
+      {
+        "addLabels": ["node:types"],
+        "groupName": "Definitely Typed",
+        "groupSlug": "definitely-typed",
+        "matchPackagePrefixes": ["@types/"]
+      },
+      {
+        "addLabels": ["node:actions"],
+        "groupName": "GitHub Actions Toolkit",
+        "groupSlug": "github-actions-toolkit",
+        "matchPackagePrefixes": ["@actions/"]
+      },
+      {
+        "addLabels": ["node:lint"],
+        "excludePackagePrefixes": ["eslint-plugin-"],
+        "groupName": "ESLint",
+        "groupSlug": "eslint",
+        "matchPackageNames": ["eslint"],
+        "matchPackagePrefixes": ["@typescript-eslint/", "eslint-"]
+      },
+      {
+        "addLabels": ["node:plugin"],
+        "groupName": "ESLint Plugins",
+        "groupSlug": "eslint-plugin",
+        "matchPackagePrefixes": ["eslint-plugin-"]
+      },
+      {
+        "addLabels": ["node:lint"],
+        "groupName": "Prettier",
+        "groupSlug": "prettier",
+        "matchPackagePrefixes": ["prettier"]
+      }
+    ],
+    "pin": {
+      "group": {
+        "commitMessageTopic": "☕ {{{groupName}}} Packages"
+      },
+      "groupName": "NodeJS"
+    },
+    "postUpdateOptions": ["npmDedupe"],
+    "rangeStrategy": "pin"
+  }
+}
