@@ -30,7 +30,7 @@
     "is-ci": "3.0.1",
     "lint-staged": "12.2.2",
     "prettier": "2.5.1",
-    "renovate": "31.38.3"
+    "renovate": "31.38.4"
   },
   "lint-staged": {
     "*.{yml,yaml}": "eslint --fix",
