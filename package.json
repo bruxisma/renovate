@@ -43,6 +43,10 @@
       {
         "automerge": true,
         "matchUpdateTypes": ["major"]
+      },
+      {
+        "matchPackageNames": ["renovate"],
+        "schedule": ["after 12pm on sunday"]
       }
     ]
   },
