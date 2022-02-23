@@ -12,7 +12,7 @@
   ],
   "labels": ["renovate:dependencies"],
   "timezone": "America/Los_Angeles",
-  "commitMessagePrefix": "⬆",
+  "commitMessagePrefix": "⬆️",
   "commitMessageSuffix": "{{#if isLockfileUpdate}}🔒{{/if}}",
   "semanticCommits": "disabled",
   "rangeStrategy": "auto",
