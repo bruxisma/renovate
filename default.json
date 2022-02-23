@@ -2,6 +2,7 @@
   "extends": [
     "bruxisma/renovate:actions",
     "bruxisma/renovate:docker",
+    "bruxisma/renovate:dotnet",
     "bruxisma/renovate:go",
     "bruxisma/renovate:node",
     "bruxisma/renovate:python",
