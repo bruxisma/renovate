@@ -21,7 +21,7 @@
   "devDependencies": {
     "eslint": "8.13.0",
     "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-json-schema-validator": "2.3.30",
+    "eslint-plugin-json-schema-validator": "2.3.31",
     "eslint-plugin-jsonc": "2.2.1",
     "eslint-plugin-markdown": "2.2.1",
     "eslint-plugin-prettier": "4.0.0",
