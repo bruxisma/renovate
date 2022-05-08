@@ -26,6 +26,11 @@
     "commitMessagePrefix": "📌",
     "commitMessageExtra": "to{{#if newVersion}} {{#if isMajor}}v{{{newMajor}}}{{else}}{{#if isSingleVersion}}v{{{newVersion}}}{{else}}{{{newValue}}}{{/if}}{{/if}}{{/if}}{{#if newDigestShort}} {{newDigestShort}}{{/if}}"
   },
+  "pinDigest": {
+    "commitMessageAction": "Pin",
+    "commitMessagePrefix": "📌",
+    "commitMessageExtra": "to{{#if newVersion}} {{#if isMajor}}v{{{newMajor}}}{{else}}{{#if isSingleVersion}}v{{{newVersion}}}{{else}}{{{newValue}}}{{/if}}{{/if}}{{/if}}{{#if newDigestShort}} {{newDigestShort}}{{/if}}"
+  },
   "vulnerabilityAlerts": {
     "addLabels": ["renovate:security"]
   },
