@@ -1,13 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 
-source "$(dirname "${0}")/_/husky.sh"
+. "$(dirname "${0}")/_/husky.sh"
 
 export LOG_LEVEL=warn
 
 npm run --silent staged:format
 npm run --silent staged:config
 
-declare branch=$(git branch --show-current)
+branch=$(git branch --show-current)
 
 if test "${branch}" != "main"; then
   exit 0
