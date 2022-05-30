@@ -6,19 +6,19 @@
     "packageRules": [
       {
         "addLabels": ["dotnet:msft"],
-        "groupName": ["Microsoft"],
+        "groupName": ["Microsoft Packages"],
         "groupSlug": "microsoft",
         "matchPackagePrefixes": ["Microsoft."]
       },
       {
         "addLabels": ["dotnet:coverage"],
-        "groupName": ["Coverage"],
+        "groupName": ["Coverage Packages"],
         "groupSlug": "coverage",
         "matchPackagePrefixes": ["coverlet.", "codecov."]
       },
       {
         "addLabels": ["dotnet:tests"],
-        "groupName": ["Testing"],
+        "groupName": ["Testing Packages"],
         "groupSlug": "testing",
         "matchPackagePrefixes": ["xunit", "xunit."]
       }
