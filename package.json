@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/bruxisma/renovate#readme",
   "devDependencies": {
-    "eslint": "8.23.1",
+    "eslint": "8.24.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-json-schema-validator": "4.0.2",
     "eslint-plugin-jsonc": "2.4.0",
