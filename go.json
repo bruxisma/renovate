@@ -1,5 +1,5 @@
 {
-  "go": {
+  "golang": {
     "addLabels": ["renovate:go"],
     "additionalBranchPrefix": "go/",
     "commitMessageTopic": "🐹 Go Module {{{depName}}}",
