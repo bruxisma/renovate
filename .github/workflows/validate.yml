@@ -21,7 +21,7 @@ jobs:
     if: needs.skip.outputs.should-skip != 'true'
     steps:
       - name: Checkout
-        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b # v3
+        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3
       - name: Review Dog - actionlint
         uses: reviewdog/action-actionlint@326cc761d95c903f29a111a44888be707f912684 # v1
   check:
@@ -31,7 +31,7 @@ jobs:
     if: needs.skip.outputs.should-skip != 'true'
     steps:
       - name: Checkout
-        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b # v3
+        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3
       - name: Setup Node
         uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516 # tag=v3
         with:
