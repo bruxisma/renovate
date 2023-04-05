@@ -2,7 +2,6 @@
   "github-actions": {
     "addLabels": ["renovate:actions"],
     "additionalBranchPrefix": "actions/",
-    "commitMessageTopic": "👷 GitHub Action {{{depName}}}",
     "pin": {
       "groupName": "GitHub Actions",
       "group": {
@@ -13,6 +12,10 @@
     "rangeStrategy": "pin"
   },
   "packageRules": [
+    {
+      "matchManagers": ["github-actions"],
+      "commitMessageTopic": "👷 GitHub Action {{{depName}}}"
+    },
     {
       "groupName": "Review Dog Actions",
       "matchManagers": ["github-actions"],
