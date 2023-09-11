@@ -9,6 +9,6 @@
         "commitMessageTopic": "🐹 {{{groupName}}} Modules"
       }
     },
-    "postUpdateOptions": ["gomodTidy"]
+    "postUpdateOptions": ["gomodTidy", "gomodUpdateImportPaths"]
   }
 }
