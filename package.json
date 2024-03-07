@@ -53,7 +53,7 @@
   "prettier": {},
   "eslintIgnore": [".git/", ".husky/", "package-lock.json"],
   "eslintConfig": {
-    "extends": ["plugin:markdown/recommended", "plugin:yaml/recommended"],
+    "extends": ["plugin:markdown/recommended-legacy", "plugin:yaml/recommended"],
     "overrides": [
       {
         "files": ["**/*.json"],
