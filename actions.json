@@ -19,17 +19,17 @@
     {
       "groupName": "Review Dog Actions",
       "matchManagers": ["github-actions"],
-      "matchPackagePrefixes": ["reviewdog/"]
+      "matchPackageNames": ["reviewdog/*"]
     },
     {
       "groupName": "Common Actions",
       "matchManagers": ["github-actions"],
-      "matchPackagePrefixes": ["actions/"]
+      "matchPackageNames": ["actions/*"]
     },
     {
       "groupName": "Setup Actions",
       "matchManagers": ["github-actions"],
-      "matchPackagePatterns": ["^[^/]+[/]setup-.+$"]
+      "matchPackageNames": ["/^[^/]+[/]setup-.+$/"]
     }
   ]
 }

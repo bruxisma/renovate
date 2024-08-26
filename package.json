@@ -4,7 +4,7 @@
   "description": "Izzy Muerte's Common Renovate Configuration",
   "private": true,
   "scripts": {
-    "prepare": "is-ci || husky install",
+    "prepare": "is-ci || husky",
     "staged:config": "npx renovate-config-validator",
     "staged:format": "npx lint-staged",
     "format": "npx eslint --fix .",

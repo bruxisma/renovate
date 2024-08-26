@@ -8,33 +8,32 @@
         "addLabels": ["node:types"],
         "groupName": "Definitely Typed",
         "groupSlug": "definitely-typed",
-        "matchPackagePrefixes": ["@types/"]
+        "matchPackageNames": ["@types/*"]
       },
       {
         "addLabels": ["node:actions"],
         "groupName": "GitHub Actions Toolkit",
         "groupSlug": "github-actions-toolkit",
-        "matchPackagePrefixes": ["@actions/"]
+        "matchPackageNames": ["@actions/*"]
       },
       {
         "addLabels": ["node:lint"],
         "excludePackagePrefixes": ["eslint-plugin-"],
         "groupName": "ESLint",
         "groupSlug": "eslint",
-        "matchPackageNames": ["eslint"],
-        "matchPackagePrefixes": ["@typescript-eslint/", "eslint-"]
+        "matchPackageNames": ["@typescript-eslint/*", "eslint-*", "eslint"]
       },
       {
         "addLabels": ["node:plugin"],
         "groupName": "ESLint Plugins",
         "groupSlug": "eslint-plugin",
-        "matchPackagePrefixes": ["eslint-plugin-"]
+        "matchPackageNames": ["eslint-plugin-*"]
       },
       {
         "addLabels": ["node:lint"],
         "groupName": "Prettier",
         "groupSlug": "prettier",
-        "matchPackagePrefixes": ["prettier"]
+        "matchPackageNames": ["prettier"]
       }
     ],
     "pin": {

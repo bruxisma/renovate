@@ -16,7 +16,7 @@
     {
       "groupName": "Rust Actions",
       "matchManagers": ["github-actions"],
-      "matchPackagePrefixes": ["actions-rs/"]
+      "matchPackageNames": ["actions-rs/*"]
     }
   ]
 }
