@@ -1,7 +1,5 @@
 #!/bin/bash
 
-. "$(dirname "${0}")/_/husky.sh"
-
 export LOG_LEVEL=warn
 
 npm run --silent staged:format

@@ -7,8 +7,8 @@
     "prepare": "is-ci || husky",
     "staged:config": "npx renovate-config-validator",
     "staged:format": "npx lint-staged",
-    "format": "npx eslint --fix .",
-    "check": "npx eslint ."
+    "format": "npx biome format --write",
+    "check": "npx biome check --files-ignore-unknown=true"
   },
   "repository": {
     "type": "git",
@@ -19,134 +19,13 @@
   },
   "homepage": "https://github.com/bruxisma/renovate#readme",
   "devDependencies": {
-    "eslint": "8.57.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-json-schema-validator": "5.1.2",
-    "eslint-plugin-jsonc": "2.16.0",
-    "eslint-plugin-markdown": "5.1.0",
-    "eslint-plugin-prettier": "5.2.1",
-    "eslint-plugin-yaml": "0.5.0",
+    "@biomejs/biome": "1.9.4",
     "husky": "9.1.5",
     "is-ci": "3.0.1",
     "lint-staged": "15.2.10",
-    "prettier": "3.3.3",
     "renovate": "38.72.1"
   },
   "lint-staged": {
-    "*.{yml,yaml}": "eslint --fix",
-    "*.json": "eslint --ext json --fix .",
-    "*.md": "eslint --ext md --fix ."
-  },
-  "renovate": {
-    "extends": ["bruxisma/renovate"],
-    "packageRules": [
-      {
-        "automerge": true,
-        "matchUpdateTypes": ["major"]
-      },
-      {
-        "matchPackageNames": ["renovate"],
-        "schedule": ["after 12pm on sunday"]
-      }
-    ]
-  },
-  "prettier": {},
-  "eslintIgnore": [".git/", ".husky/", "package-lock.json"],
-  "eslintConfig": {
-    "extends": ["plugin:markdown/recommended-legacy", "plugin:yaml/recommended"],
-    "overrides": [
-      {
-        "files": ["**/*.json"],
-        "excludedFiles": ["package.json", "package-lock.json"],
-        "extends": [
-          "plugin:json-schema-validator/recommended",
-          "plugin:jsonc/recommended-with-json",
-          "plugin:prettier/recommended"
-        ],
-        "rules": {
-          "json-schema-validator/no-invalid": [
-            "error",
-            "https://docs.renovatebot.com/renovate-schema.json"
-          ],
-          "jsonc/sort-keys": [
-            "error",
-            {
-              "hasProperties": ["addLabels"],
-              "order": {
-                "type": "asc"
-              },
-              "pathPattern": ".*"
-            },
-            {
-              "hasProperties": ["labels"],
-              "order": [
-                "extends",
-                "labels",
-                "timezone",
-                "commitMessagePrefix",
-                "commitMessageSuffix",
-                "semanticCommits",
-                "rangeStrategy",
-                "rebaseWhen",
-                "rollback",
-                "pin"
-              ],
-              "pathPattern": ".*"
-            }
-          ]
-        }
-      },
-      {
-        "files": ["package.json"],
-        "extends": ["plugin:jsonc/recommended-with-json"],
-        "rules": {
-          "jsonc/array-bracket-newline": [
-            "error",
-            {
-              "minItems": null,
-              "multiline": true
-            }
-          ],
-          "jsonc/array-bracket-spacing": ["error"],
-          "jsonc/array-element-newline": [
-            "error",
-            "consistent"
-          ],
-          "jsonc/indent": [
-            "error",
-            2
-          ],
-          "jsonc/object-curly-newline": [
-            "error",
-            {
-              "consistent": true
-            }
-          ],
-          "jsonc/object-curly-spacing": [
-            "error",
-            "always",
-            {
-              "arraysInObjects": false,
-              "objectsInObjects": false
-            }
-          ],
-          "jsonc/object-property-newline": [
-            "error",
-            {
-              "allowAllPropertiesOnSameLine": true
-            }
-          ],
-          "jsonc/sort-keys": [
-            "error",
-            {
-              "order": {
-                "type": "asc"
-              },
-              "pathPattern": "rules"
-            }
-          ]
-        }
-      }
-    ]
+    "*.json": "biome format --write"
   }
 }
