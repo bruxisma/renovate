@@ -1,0 +1,34 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
+  "files": { "ignoreUnknown": false, "ignore": [] },
+  "formatter": { "enabled": true, "indentStyle": "space" },
+  "organizeImports": { "enabled": true },
+  "linter": {
+    "enabled": true,
+    "rules": { "recommended": false },
+    "ignore": ["**/.git/", "**/.husky/", "**/package-lock.json"]
+  },
+  "javascript": { "formatter": { "quoteStyle": "double" } },
+  "overrides": [
+    {
+      "ignore": ["package.json", "package-lock.json"],
+      "include": ["**/*.json"],
+      "linter": { "rules": {} }
+    },
+    { "include": ["package.json"], "linter": { "rules": {} } },
+    { "include": ["*.md"] },
+    {
+      "include": ["**/*.md/**"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUndeclaredVariables": "off",
+            "noUnusedVariables": "off"
+          }
+        }
+      }
+    },
+    { "include": ["*.yaml", "*.yml"] }
+  ]
+}

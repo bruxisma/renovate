@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["bruxisma/renovate", "customManagers:biomeVersions"],
+  "packageRules": [
+    {
+      "automerge": true,
+      "matchUpdateTypes": ["major"]
+    },
+    {
+      "matchPackageNames": ["renovate"],
+      "schedule": ["after 12pm on sunday"]
+    }
+  ]
+}
