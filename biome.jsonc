@@ -1,25 +1,24 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.3.2/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.3.3/schema.json",
   "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
-  "files": { "ignoreUnknown": false, "ignore": [] },
+  "files": { "ignoreUnknown": false, "includes": ["**"] },
   "formatter": { "enabled": true, "indentStyle": "space" },
-  "organizeImports": { "enabled": true },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": { "recommended": false },
-    "ignore": ["**/.git/", "**/.husky/", "**/package-lock.json"]
+    "includes": ["**", "!**/.git/", "!**/.husky/", "!**/package-lock.json"]
   },
   "javascript": { "formatter": { "quoteStyle": "double" } },
   "overrides": [
     {
-      "ignore": ["package.json", "package-lock.json"],
-      "include": ["**/*.json"],
+      "includes": ["**/*.json", "!**/package.json", "!**/package-lock.json"],
       "linter": { "rules": {} }
     },
-    { "include": ["package.json"], "linter": { "rules": {} } },
-    { "include": ["*.md"] },
+    { "includes": ["**/package.json"], "linter": { "rules": {} } },
+    { "includes": ["**/*.md"] },
     {
-      "include": ["**/*.md/**"],
+      "includes": ["**/*.md/**"],
       "linter": {
         "rules": {
           "correctness": {
@@ -29,6 +28,6 @@
         }
       }
     },
-    { "include": ["*.yaml", "*.yml"] }
+    { "includes": ["**/*.yaml", "**/*.yml"] }
   ]
 }

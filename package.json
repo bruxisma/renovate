@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/bruxisma/renovate#readme",
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "2.3.3",
     "husky": "9.1.7",
     "is-ci": "4.1.0",
     "lint-staged": "16.2.6",
