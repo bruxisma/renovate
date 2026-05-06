@@ -22,7 +22,7 @@
     "@biomejs/biome": "2.4.14",
     "husky": "9.1.7",
     "is-ci": "4.1.0",
-    "lint-staged": "16.4.0",
+    "lint-staged": "17.0.2",
     "renovate": "43.150.0"
   },
   "lint-staged": {
