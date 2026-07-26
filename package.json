@@ -23,7 +23,7 @@
     "husky": "9.1.7",
     "is-ci": "4.1.0",
     "lint-staged": "17.2.0",
-    "renovate": "43.275.0"
+    "renovate": "43.281.1"
   },
   "lint-staged": {
     "*.json": "biome format --write"
